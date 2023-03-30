@@ -1,0 +1,60 @@
+<div *ngIf="products.length !=0">
+    <div class="">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card cardinfo">
+                    <h5 class="card-title" style="font-we
+                    :900">My Orders</h5>
+                </div>
+        <div class="card-table cardtable">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                            <td style="width: 25%; text-align: justify;">{{item.description}}</td>
+                            <th style="width: 10%;">{{item.price}}</th>
+                            <td style="width: 10%;">{{item.quantity}}</td>
+                            <td style="width: 15%;">{{item.total}}</td>
+                           
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div *ngIf="products.length ==0">
+    <div class="row">
+        <div class="col-sm-12">
+        <div class="card cardinfo">
+            <h5 class="card-title">My Orders</h5>
+        </div>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="" style="width: 30%;">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+        </div>
+        </div>
+    </div>
+</div>
+

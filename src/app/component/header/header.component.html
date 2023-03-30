@@ -1,0 +1,20 @@
+<div class="topnav">
+    <div class="row">
+        <div class="col-md-2"> <a class="active" href="#home"> <strong style="font-size: 20px;">E-Commerce</strong></a>
+        </div>
+        <div class="col-md-8 aligndiv">
+            <div class="search-container">
+                <div [formGroup]="searchForm">
+                    <input type="text" formControlName="items" placeholder="search products">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2" style="float: right;">
+            <a class="myorder"> <strong style="font-size: 20px;" routerLink="orders">My Orders</strong></a>
+            <button routerLink="cart" class="btn btn-primary" style="margin: 7px;">
+                <i class="fa fa-shopping-cart" style="font-size: 30px;" aria-hidden="true"></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+            </button>
+        </div>
+    </div>
+</div>
